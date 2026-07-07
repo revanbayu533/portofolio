@@ -13,6 +13,19 @@
 </head>
 
 <body>
+    <div class="top-controls">
+        <button id="theme-toggle" class="control-btn" aria-label="Toggle Theme">
+            <svg class="sun-icon" viewBox="0 0 24 24">
+                <path
+                    d="M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M11,1L13,1V4L11,4V1M11,20L13,20V23L11,23V20M5.64,4.22L7.05,5.64L4.93,7.76L3.5,6.34L5.64,4.22M18.36,19.78L16.95,18.36L19.07,16.24L20.5,17.66L18.36,19.78M1.05,11L4.05,11V13L1.05,13V11M20.05,11L23.05,11V13L20.05,13V11M4.22,18.36L5.64,19.78L7.76,17.66L6.34,16.24L4.22,18.36M19.78,5.64L18.36,4.22L16.24,6.34L17.66,7.76L19.78,5.64Z" />
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" style="display: none;">
+                <path
+                    d="M17.75,4.09L15.22,6.03L16.13,9.09L13.5,7.28L10.87,9.09L11.78,6.03L9.25,4.09L12.44,4L13.5,1L14.56,4L17.75,4.09M21.25,11L19.61,12.25L20.2,14.23L18.5,13.06L16.8,14.23L17.39,12.25L15.75,11L17.81,10.95L18.5,9L19.19,10.95L21.25,11M18.97,15.95C19.8,15.87 20.69,17.05 20.16,17.8C19.84,18.25 19.5,18.67 19.11,19.07C15.14,23.04 8.71,23.04 4.74,19.07C0.77,15.1 0.77,8.67 4.74,4.7C5.14,4.31 5.56,3.97 6.01,3.65C6.76,3.12 7.94,4.01 7.86,4.84C7.8,5.55 7.77,6.27 7.77,7C7.77,11.42 11.35,15 15.77,15C16.48,15 17.2,14.97 17.91,14.91L18.97,15.95Z" />
+            </svg>
+        </button>
+        <button id="lang-toggle" class="control-btn" aria-label="Toggle Language">ID</button>
+    </div>
 
     <section id="hero" class="hero-section">
         <div class="hero-container">
@@ -28,14 +41,16 @@
             </div>
 
             <div class="hero-content">
-                <span class="hero-subtitle">Halo, Saya</span>
+                <span class="hero-subtitle" data-i18n="hero_subtitle">Halo, Saya</span>
                 <h1 class="hero-title">Revans Kurnia Bayu Prakoso</h1>
                 <p class="hero-description"></p>
                 <div class="hero-buttons">
-                    <a href="#about" class="btn btn-primary">Tentang Saya</a>
-                    <a href="#skills" class="btn btn-secondary">Lihat Skill</a>
-                    <a href="#project" class="btn btn-secondary">Lihat Project</a>
-                    <a href="#contact" class="btn btn-secondary">Kontak</a>
+                    <a href="#about" class="btn btn-primary" data-i18n="hero_btn_about">Tentang Saya</a>
+                    <a href="#" id="download-cv-btn" class="btn btn-primary" data-i18n="hero_btn_cv">Download CV</a>
+                    <a href="#skills" class="btn btn-secondary" data-i18n="hero_btn_skill">Lihat Skill</a>
+                    <a href="#project" class="btn btn-secondary" data-i18n="hero_btn_project">Lihat Project</a>
+                    <a href="#blog" class="btn btn-secondary" data-i18n="hero_btn_blog">Blog</a>
+                    <a href="#contact" class="btn btn-secondary" data-i18n="hero_btn_contact">Kontak</a>
                 </div>
             </div>
         </div>
@@ -45,20 +60,22 @@
         <div class="section-container">
 
             <div class="about-box">
-                <h2 class="section-title">About Me</h2>
-                <p class="about-text">Sebagai siswa PPLG di SMKN 1 Cianjur, saya fokus membangun fondasi logika
+                <h2 class="section-title" data-i18n="about_title">About Me</h2>
+                <p class="about-text" data-i18n="about_p1">Sebagai siswa PPLG di SMKN 1 Cianjur, saya fokus membangun
+                    fondasi logika
                     pemrograman yang kuat. Melalui tantangan menulis 100 program Python dan berbagai aplikasi lainnya,
                     saya mengasah kemampuan
                     memecahkan masalah "problem-solving" secara bertahap, mulai dari pengolahan data dasar hingga
                     pembuatan aplikasi untuk umkm.</p>
-                <p class="about-text">Saya sangat menyukai proses membuat aplikasi yang ada di kepala Saya, mempelajari
+                <p class="about-text" data-i18n="about_p2">Saya sangat menyukai proses membuat aplikasi yang ada di
+                    kepala Saya, mempelajari
                     arsitektur perangkat
                     lunak baru, dan berambisi untuk terus berkembang di bidang *software engineering* serta pengembangan
                     aplikasi masa depan.</p>
             </div>
 
             <div id="skills" class="skill-box">
-                <h2 class="section-title">My Skills</h2>
+                <h2 class="section-title" data-i18n="skills_title">My Skills</h2>
                 <div class="skills-grid">
 
                     <div class="skill-card">
@@ -125,13 +142,13 @@
 
     <section id="project" class="project-section">
         <div class="project-container">
-            <h2 class="section-title">My Projects</h2>
+            <h2 class="section-title" data-i18n="project_title">My Projects</h2>
             <div class="project-grid">
 
                 <div class="project-card">
                     <div class="project-info">
                         <h3 class="project-name">Landing Page Juragan Barbershop</h3>
-                        <p class="project-desc">
+                        <p class="project-desc" data-i18n="project1_desc">
                             Sebuah project web untuk mempromosikan bisnis barbershop yang bernama "Juragan Barbershop"
                             dengan
                             tujuan meningkatkan visibilitas online dan memudahkan pelanggan dalam mendapatkan informasi.
@@ -143,14 +160,16 @@
                         <div class="project-tech">
                             <span class="tech-badge">Next.js</span>
                         </div>
-                        <a href="https://juraganbarbershop.vercel.app/" target="_blank" class="btn-project">Hasil</a>
+                        <a href="https://juraganbarbershop.vercel.app/" target="_blank" class="btn-project"
+                            data-i18n="project1_btn">Hasil</a>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-info">
-                        <h3 class="project-name">Web dan aplikasi yg lain</h3>
-                        <p class="project-desc">sebuah project web untuk menampilkan data dengan
+                        <h3 class="project-name" data-i18n="project2_title">Web dan aplikasi yg lain</h3>
+                        <p class="project-desc" data-i18n="project2_desc">sebuah project web untuk menampilkan data
+                            dengan
                             menggunakan php native dan mysql dan aplikasi yang saya buat pasti saya masukkan juga
                             ke github ini.
                         </p>
@@ -158,7 +177,37 @@
                             <span class="tech-badge">PHP</span>
                             <span class="tech-badge">MySQL</span>
                         </div>
-                        <a href="https://github.com/revanbayu533" target="_blank" class="btn-project">Repository Git</a>
+                        <a href="https://github.com/revanbayu533" target="_blank" class="btn-project"
+                            data-i18n="project2_btn">Repository Git</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog-section">
+        <div class="blog-container">
+            <h2 class="section-title" data-i18n="blog_title">My Blog</h2>
+            <div class="blog-grid">
+
+                <div class="blog-card">
+                    <div class="blog-info">
+                        <span class="blog-date">22 Jul 2024</span>
+                        <h3 class="blog-name" data-i18n="blog1_title">Perjalanan Belajar Programming</h3>
+                        <p class="blog-desc" data-i18n="blog1_desc">Mempelajari dasar-dasar pemrograman python dan
+                            tantangan yang saya hadapi dari awal hingga bisa membuat aplikasi sederhana.</p>
+                        <a href="#" class="blog-link" data-i18n="blog_btn">Baca Selengkapnya &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-info">
+                        <span class="blog-date">7 mei 2026</span>
+                        <h3 class="blog-name" data-i18n="blog2_title">Membuat produk untuk UMKM</h3>
+                        <p class="blog-desc" data-i18n="blog2_desc">projek juragan barbershop adalah projek saya yang
+                            pertama kali terjun ke dunia pembuatan produk digital untuk UMKM</p>
+                        <a href="#" class="blog-link" data-i18n="blog_btn">Baca Selengkapnya &rarr;</a>
                     </div>
                 </div>
 
@@ -168,8 +217,9 @@
 
     <section id="contact" class="contact-section">
         <div class="contact-container">
-            <h2 class="section-title">Contact Me</h2>
-            <p class="contact-desc">Mari terhubung! Jika Anda memiliki pertanyaan atau ingin bekerja sama, jangan ragu
+            <h2 class="section-title" data-i18n="contact_title">Contact Me</h2>
+            <p class="contact-desc" data-i18n="contact_desc">Mari terhubung! Jika Anda memiliki pertanyaan atau ingin
+                bekerja sama, jangan ragu
                 untuk menghubungi saya melalui kontak di bawah ini.</p>
             <div class="contact-links">
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=revanbayu533@gmail.com" target="_blank"
@@ -199,9 +249,11 @@
     </section>
 
     <footer class="footer">
-        <p>&copy; <span id="year"></span> Revans Kurnia Bayu Prakoso. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> <span data-i18n="footer_text">Revans Kurnia Bayu Prakoso. All rights
+                reserved.</span></p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="portofolio.js"></script>
 </body>
 

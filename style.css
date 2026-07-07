@@ -7,6 +7,21 @@
     --text-main: #e6f1f8;
     --text-muted: #8eb3cf;
     --border-glow: rgba(0, 229, 255, 0.4);
+    --btn-secondary-bg: rgba(255, 255, 255, 0.05);
+    --card-bg: rgba(255, 255, 255, 0.03);
+}
+
+[data-theme="light"] {
+    --bg-primary: #f0f4f8;
+    --bg-secondary: #c9d6ea;
+    --accent-cosmic: #0066cc;
+    --accent-nebula: #8eb3cf;
+    --accent-title: #1a202c;
+    --text-main: #2d3748;
+    --text-muted: #4a5568;
+    --border-glow: rgba(0, 102, 204, 0.2);
+    --btn-secondary-bg: rgba(0, 0, 0, 0.05);
+    --card-bg: rgba(255, 255, 255, 0.8);
 }
 
 * {
@@ -145,7 +160,7 @@ body::after {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
-    max-width: 380px;
+    max-width: 480px;
     margin: 0 auto;
 }
 
@@ -173,7 +188,7 @@ body::after {
 }
 
 .btn-secondary {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--btn-secondary-bg);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     color: var(--text-main);
@@ -204,7 +219,7 @@ body::after {
 .about-box,
 .skill-box {
     flex: 1;
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--card-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -246,7 +261,7 @@ body::after {
 }
 
 .skill-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--card-bg);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -341,7 +356,7 @@ body::after {
 }
 
 .project-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--card-bg);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -411,6 +426,86 @@ body::after {
 .btn-project:hover {
     box-shadow: 0 4px 15px var(--accent-cosmic);
     transform: scale(1.05);
+}
+
+.blog-section {
+    background: transparent;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-container {
+    width: 100%;
+    max-width: 1100px;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.blog-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 229, 255, 0.2);
+    border-color: var(--accent-cosmic);
+}
+
+.blog-info {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.blog-date {
+    font-size: 0.85rem;
+    color: var(--accent-cosmic);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.blog-name {
+    font-size: 1.3rem;
+    color: var(--text-main);
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.blog-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.blog-link {
+    display: inline-block;
+    color: var(--accent-nebula);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.blog-link:hover {
+    color: var(--accent-cosmic);
 }
 
 .contact-section {
@@ -493,4 +588,56 @@ body::after {
 .footer p {
     color: var(--text-muted);
     font-size: 0.95rem;
+}
+
+/* Controls */
+.top-controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 12px;
+    z-index: 1000;
+}
+
+.control-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--accent-cosmic);
+    color: var(--text-main);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-family: inherit;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.control-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px var(--border-glow);
+}
+
+.control-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* Menyembunyikan elemen non-CV saat export ke PDF */
+.pdf-export-mode .btn,
+.pdf-export-mode .btn-project,
+.pdf-export-mode .blog-link,
+.pdf-export-mode .btn-contact,
+.pdf-export-mode .top-controls,
+.pdf-export-mode .project-section,
+.pdf-export-mode .blog-section,
+.pdf-export-mode .contact-section,
+.pdf-export-mode .footer {
+    display: none !important;
 }
