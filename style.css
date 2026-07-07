@@ -629,15 +629,140 @@ body::after {
     fill: currentColor;
 }
 
-/* Menyembunyikan elemen non-CV saat export ke PDF */
+/* Styling khusus PDF agar terlihat rapi seperti CV */
+.pdf-export-mode {
+    background: #ffffff !important;
+    color: #333333 !important;
+}
+
+.pdf-export-mode body::before, 
+.pdf-export-mode body::after {
+    display: none !important;
+}
+
 .pdf-export-mode .btn,
 .pdf-export-mode .btn-project,
 .pdf-export-mode .blog-link,
 .pdf-export-mode .btn-contact,
 .pdf-export-mode .top-controls,
-.pdf-export-mode .project-section,
 .pdf-export-mode .blog-section,
 .pdf-export-mode .contact-section,
 .pdf-export-mode .footer {
     display: none !important;
+}
+
+.pdf-export-mode .hero-section {
+    min-height: auto !important;
+    padding: 40px 20px 20px 20px !important;
+}
+
+.pdf-export-mode .hero-container {
+    gap: 15px !important;
+}
+
+.pdf-export-mode .hero-title {
+    color: #111111 !important;
+    text-shadow: none !important;
+    font-size: 2.2rem !important;
+    margin-bottom: 8px !important;
+}
+
+.pdf-export-mode .hero-subtitle {
+    color: #0066cc !important;
+}
+
+.pdf-export-mode .hero-description {
+    color: #444444 !important;
+    font-size: 1rem !important;
+}
+
+.pdf-export-mode .avatar-wrapper {
+    width: 150px !important;
+    height: 150px !important;
+    margin: 0 auto !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: 3px solid #0066cc !important;
+}
+
+.pdf-export-mode .avatar-svg {
+    fill: #666666 !important;
+}
+
+.pdf-export-mode .about-skill-section {
+    padding: 10px 20px !important;
+}
+
+.pdf-export-mode .about-box,
+.pdf-export-mode .skill-box {
+    background: transparent !important;
+    border: 1px solid #dddddd !important;
+    box-shadow: none !important;
+    padding: 24px !important;
+    border-radius: 8px !important;
+}
+
+.pdf-export-mode .section-title {
+    color: #111111 !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 16px !important;
+}
+
+.pdf-export-mode .section-title::after {
+    background: #0066cc !important;
+}
+
+.pdf-export-mode .about-text {
+    color: #444444 !important;
+    font-size: 1rem !important;
+}
+
+.pdf-export-mode .skill-card {
+    background: transparent !important;
+    border: 1px solid #eeeeee !important;
+    box-shadow: none !important;
+    padding: 12px !important;
+}
+
+.pdf-export-mode .skill-name {
+    color: #222222 !important;
+}
+
+.pdf-export-mode .progress-bar {
+    background: #e0e0e0 !important;
+}
+
+.pdf-export-mode .progress-fill {
+    background: #0066cc !important;
+    box-shadow: none !important;
+}
+
+.pdf-export-mode .project-section {
+    padding: 10px 20px !important;
+}
+
+.pdf-export-mode .project-card {
+    background: transparent !important;
+    border: 1px solid #dddddd !important;
+    box-shadow: none !important;
+    padding: 16px !important;
+    border-radius: 8px !important;
+}
+
+.pdf-export-mode .project-name {
+    color: #111111 !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 8px !important;
+}
+
+.pdf-export-mode .project-desc {
+    color: #444444 !important;
+    font-size: 0.95rem !important;
+    margin-bottom: 12px !important;
+}
+
+.pdf-export-mode .tech-badge {
+    background: #eeeeee !important;
+    color: #333333 !important;
+    border: 1px solid #cccccc !important;
 }

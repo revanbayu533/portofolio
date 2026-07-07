@@ -18,6 +18,9 @@ const translations = {
         project2_title: "Web dan aplikasi yg lain",
         project2_desc: "sebuah project web untuk menampilkan data dengan menggunakan php native dan mysql dan aplikasi yang saya buat pasti saya masukkan juga ke github ini.",
         project2_btn: "Repository Git",
+        project3_title: "Pokedex (Hasil PKL)",
+        project3_desc: "Sebuah aplikasi web Pokedex yang menampilkan berbagai informasi tentang Pokemon. Proyek ini merupakan hasil kolaborasi bersama teman sebagai bagian dari kegiatan Praktik Kerja Lapangan (PKL).",
+        project3_btn: "Lihat Hasil",
         blog_title: "My Blog",
         blog1_title: "Perjalanan Belajar Programming",
         blog1_desc: "Mempelajari dasar-dasar pemrograman python dan tantangan yang saya hadapi dari awal hingga bisa membuat aplikasi sederhana.",
@@ -47,6 +50,9 @@ const translations = {
         project2_title: "Other Web and Apps",
         project2_desc: "A web project to display data using native PHP and MySQL and I will definitely upload the applications I made to this GitHub.",
         project2_btn: "Git Repository",
+        project3_title: "Pokedex (PKL Project)",
+        project3_desc: "A Pokedex web application that displays various information about Pokemon. This project is a collaboration with a friend as part of my Field Work Practice (PKL) activities.",
+        project3_btn: "View",
         blog_title: "My Blog",
         blog1_title: "My Programming Journey",
         blog1_desc: "Learning the basics of Python programming and the challenges I faced from the beginning until being able to create simple applications.",
@@ -144,7 +150,7 @@ document.getElementById('download-cv-btn').addEventListener('click', function(e)
       margin:       [0.2, 0, 0.2, 0], // Margin atas dan bawah agar tidak terlalu mepet
       filename:     'Portofolio_Revans_Kurnia.pdf',
       image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { scale: 2, useCORS: true, backgroundColor: document.documentElement.getAttribute('data-theme') === 'light' ? '#f0f4f8' : '#0a1128' },
+      html2canvas:  { scale: 2, useCORS: true, backgroundColor: '#ffffff' },
       jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' },
       pagebreak:    { mode: ['css', 'legacy'], avoid: ['section', '.about-box', '.skill-box', '.project-card', '.blog-card', '.contact-links'] }
     };
